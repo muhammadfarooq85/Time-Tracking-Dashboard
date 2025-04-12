@@ -1,11 +1,155 @@
-@import url("https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  --bodyBgcolor: #0d1323;
+  --profileBgColor: #5746ea;
+  --cardsBottomBgColor: #1c264a;
+  --workColorTopBgColor: #ff8c66;
+  --playCardTopBgColor: #56c2e6;
+  --studyCardTopBgColor: #ff5c7c;
+  --exerciseCardTopBgColor: #4acf81;
+  --socialCardTopBgcolor: #7536d3;
+  --selfCareCardTopBgColor: #f1c65b;
+}
 
 * {
-  padding: 0px;
-  margin: 0px;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: "Special Goth";
+  background-color: var(--bodyBgcolor);
+  font-family: "Rubik", sans-serif;
+  padding: 150px;
+  color: white;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .dashboard {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+
+  body {
+    padding: 50px;
+  }
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-top {
+  height: 60px;
+}
+
+.card-bottom {
+  background-color: var(--cardsBottomBgColor);
+  padding: 20px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.subtext {
+  color: #c3c7d9;
+  font-size: 14px;
+}
+
+.profile {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--profileBgColor);
+}
+
+.profile-top {
+  background-color: var(--profileBgColor);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.profile-top img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.profile-info p {
+  font-size: 14px;
+  color: #c3c7d9;
+}
+
+.card-top {
+  display: flex;
+  justify-content: end;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  font-size: 20px;
+}
+
+.profile-options {
+  background-color: var(--cardsBottomBgColor);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 15px;
+}
+
+.profile-options button {
+  text-align: left;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #c3c7d9;
+  cursor: pointer;
+}
+
+.work .card-top {
+  background-color: var(--workColorTopBgColor);
+}
+.play .card-top {
+  background-color: var(--playCardTopBgColor);
+}
+.study .card-top {
+  background-color: var(--studyCardTopBgColor);
+}
+.exercise .card-top {
+  background-color: var(--exerciseCardTopBgColor);
+}
+.social .card-top {
+  background-color: var(--socialCardTopBgcolor);
+}
+.self-care .card-top {
+  background-color: var(--selfCareCardTopBgColor);
 }

@@ -2,19 +2,120 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <!-- Custom Css -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Google Fonts -->
-     
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
+    <div class="main-container">
+        <div class="dashboard">
 
-    <!-- Custom Js -->
+            <!-- Profile Card -->
+            <div class="profile card">
+                <div class="profile-top">
+                    <img src="./assets/images/image-jeremy.png" alt="Profile">
+                    <div class="profile-info">
+                        <p>Report for</p>
+                        <h2>Jeremy Robson</h2>
+                    </div>
+                </div>
+                <div class="profile-options">
+                    <button class="time-option" data-time="daily">Daily</button>
+                    <button class="time-option" data-time="weekly">Weekly</button>
+                    <button class="time-option" data-time="monthly">Monthly</button>
+                </div>
+            </div>
+
+            <!-- Activity Cards -->
+            <div class="card work" data-title="Work">
+                <div class="card-top">
+                    <img src="./assets/images/icon-work.svg" alt="work-icon">
+                </div>
+                <div class="card-bottom">
+                    <div class="card-header">
+                        <p>Work</p>
+                        <span>...</span>
+                    </div>
+                    <h3 class="current">5hrs</h3>
+                    <p class="subtext previous">Yesterday - 7hrs</p>
+                </div>
+            </div>
+
+            <div class="card play" data-title="Play">
+                <div class="card-top">
+                    <img src="./assets/images/icon-play.svg" alt="work-icon">
+                </div>
+                <div class="card-bottom">
+                    <div class="card-header">
+                        <p>Play</p>
+                        <span>...</span>
+                    </div>
+                    <h3 class="current">1hr</h3>
+                    <p class="subtext previous">Yesterday - 2hrs</p>
+                </div>
+            </div>
+
+            <div class="card study" data-title="Study">
+                <div class="card-top">
+                    <img src="./assets/images/icon-study.svg" alt="work-icon">
+                </div>
+                <div class="card-bottom">
+                    <div class="card-header">
+                        <p>Study</p>
+                        <span>...</span>
+                    </div>
+                    <h3 class="current">0hrs</h3>
+                    <p class="subtext previous">Yesterday - 1hr</p>
+                </div>
+            </div>
+
+            <div class="card exercise" data-title="Exercise">
+                <div class="card-top">
+                    <img src="./assets/images/icon-exercise.svg" alt="work-icon">
+                </div>
+                <div class="card-bottom">
+                    <div class="card-header">
+                        <p>Exercise</p>
+                        <span>...</span>
+                    </div>
+                    <h3 class="current">1hr</h3>
+                    <p class="subtext previous">Yesterday - 1hr</p>
+                </div>
+            </div>
+
+            <div class="card social" data-title="Social">
+                <div class="card-top">
+                    <img src="./assets/images/icon-social.svg" alt="work-icon">
+                </div>
+                <div class="card-bottom">
+                    <div class="card-header">
+                        <p>Social</p>
+                        <span>...</span>
+                    </div>
+                    <h3 class="current">1hr</h3>
+                    <p class="subtext previous">Yesterday - 3hrs</p>
+                </div>
+            </div>
+
+            <div class="card self-care" data-title="Self Care">
+                <div class="card-top">
+                    <img src="./assets/images/icon-self-care.svg" alt="work-icon">
+                </div>
+                <div class="card-bottom">
+                    <div class="card-header">
+                        <p>Self Care</p>
+                        <span>...</span>
+                    </div>
+                    <h3 class="current">0hrs</h3>
+                    <p class="subtext previous">Yesterday - 1hr</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 
